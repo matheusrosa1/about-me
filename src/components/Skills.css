@@ -1,0 +1,17 @@
+/* src/components/Skills.css */
+.skills-container {
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.skills-container h2 {
+  color: #333;
+}
+
+.skills-container ul {
+  margin-top: 10px;
+}
+
+.skills-container li {
+  color: #666;
+}
