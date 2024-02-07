@@ -1,0 +1,9 @@
+/* src/components/ProjectsSection.css */
+.projects-section {
+  background-color: #e0e0e0;
+  padding: 20px;
+}
+
+.projects-section h2 {
+  color: #333;
+}

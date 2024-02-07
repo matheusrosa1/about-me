@@ -1,0 +1,10 @@
+/* src/styles/global.module.css */
+body {
+  background-color: #ffffff;
+  color: #333;
+}
+
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #fff;
+}

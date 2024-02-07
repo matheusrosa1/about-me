@@ -1,0 +1,32 @@
+/* src/components/DarkModeToggle.css */
+.button-toggle {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.button-toggle.active {
+  background-color: #f44336;
+}
+
+/* Estilos adicionados para o modo escuro */
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.dark-mode {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.button-toggle.dark-mode {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.active {
+  background-color: #f44336;
+}

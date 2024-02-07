@@ -1,11 +1,10 @@
-// src/components/Skills.tsx
-import React from 'react';
+// src/components/SkillsSection.tsx
 import { Reveal } from 'react-awesome-reveal';
-import './Skills.css';
+import './SkillsSection.css';
 
-function Skills() {
+function SkillsSection() {
   return (
-    <Reveal className="skills-container">
+    <Reveal className="section skills-section">
       <div>
         <h2>Skills</h2>
         <ul>
@@ -19,4 +18,4 @@ function Skills() {
   );
 }
 
-export default Skills;
+export default SkillsSection;
