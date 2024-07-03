@@ -1,17 +1,24 @@
+import { ThemeProvider } from 'styled-components';
+
+import { useContext } from 'react';
 import SkillsSection from './components/Skills/SkillsSection';
 import ProjectsSection from './components/Projects/ProjectsSection';
 import HeaderSection from './components/Header/HeaderSection';
-import './styles/global.module.css';
-import DarkModeProvider from './contexts/DarkModeProvider';
+import DarkModeContext from './contexts/DarkModeContext';
+import dark from './styles/themes/dark';
+import light from './styles/themes/light';
+import GlobalStyles from './styles/globalStyles';
 
 function App() {
+  const { darkMode } = useContext(DarkModeContext);
   return (
     <div>
-      <DarkModeProvider>
+      <ThemeProvider theme={ darkMode ? dark : light }>
+        <GlobalStyles />
         <HeaderSection />
         <SkillsSection />
         <ProjectsSection />
-      </DarkModeProvider>
+      </ThemeProvider>
       {/* Adicione outras seções aqui */}
     </div>
   );

@@ -1,4 +1,4 @@
 export type DarkModeContextType = {
-  isDarkMode: boolean;
+  darkMode: boolean;
   toggleDarkMode: () => void;
 };

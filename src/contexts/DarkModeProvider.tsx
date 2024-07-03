@@ -7,35 +7,33 @@ type DarkModeProviderProps = {
 };
 
 function DarkModeProvider({ children }: DarkModeProviderProps) {
-  const [isDarkMode, setDarkMode] = useState<boolean>(() => {
+/*   const [isDarkMode, setDarkMode] = useState<boolean>(() => {
     const storedDarkMode = localStorage.getItem('darkMode');
     return storedDarkMode ? JSON.parse(storedDarkMode) : false;
-  });
+  }); */
 
-  const applyDarkModeStyles = (darkMode: boolean) => {
+  const [darkMode, setDarkMode] = useState<boolean>(false);
+
+  /*   const applyDarkModeStyles = (darkMode: boolean) => {
     const { body } = document;
     if (darkMode) {
       body.classList.add('dark-mode');
     } else {
       body.classList.remove('dark-mode');
     }
-  };
+  }; */
 
   const toggleDarkMode = () => {
-    setDarkMode((prev) => {
-      const newDarkMode = !prev;
-      localStorage.setItem('darkMode', JSON.stringify(newDarkMode));
-      applyDarkModeStyles(newDarkMode);
-      return newDarkMode;
-    });
+    setDarkMode(!darkMode);
+    localStorage.setItem('darkMode', JSON.stringify(!darkMode));
   };
-
+  /*
   useEffect(() => {
     applyDarkModeStyles(isDarkMode);
-  }, [isDarkMode]);
+  }, [isDarkMode]); */
 
   const contextValue: DarkModeContextType = {
-    isDarkMode,
+    darkMode,
     toggleDarkMode,
   };
 

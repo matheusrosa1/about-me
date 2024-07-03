@@ -5,9 +5,9 @@ import DarkModeProvider from './contexts/DarkModeProvider.tsx';
 /* import './index.css' */
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-/*   <DarkModeProvider> */
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-/*   </DarkModeProvider>, */
+  <DarkModeProvider>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </DarkModeProvider>,
 );

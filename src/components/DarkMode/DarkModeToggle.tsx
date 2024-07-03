@@ -1,17 +1,23 @@
-import styles from './DarkModeToggle.module.css';
-import { useDarkMode } from '../../contexts/DarkModeContext';
+import { useContext } from 'react';
+import DarkModeContext from '../../contexts/DarkModeContext';
 
 function DarkModeToggle() {
-  const { isDarkMode, toggleDarkMode } = useDarkMode();
+  const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
 
   return (
-    <button
-      className={ `${styles.buttonToggle} 
-    ${isDarkMode ? styles.active : ''}` }
-      onClick={ toggleDarkMode }
-    >
-      {isDarkMode ? 'Light Mode' : 'Dark Mode'}
-    </button>
+    <div className="container">
+      <input
+        type="checkbox"
+        className="checkbox chk"
+        checked={ darkMode }
+        onChange={ toggleDarkMode }
+      />
+      <label className="label" htmlFor="chk">
+        <img src="/sun.svg" alt="sunTheme" />
+        <img src="/moon.svg" alt="moonTheme" />
+        <div className="ball" />
+      </label>
+    </div>
   );
 }
 
